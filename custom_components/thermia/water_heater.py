@@ -108,17 +108,17 @@ class ThermiaWaterHeater(
         return default_max_temp
 
     @property
-    def current_temperature(self):
+    def native_current_temperature(self):
         """Return the current temperature."""
         return self.coordinator.data.heat_pumps[self.idx].indoor_temperature
 
     @property
-    def target_temperature(self):
+    def native_target_temperature(self):
         """Return the temperature we try to reach."""
         return self.coordinator.data.heat_pumps[self.idx].heat_temperature
 
     @property
-    def temperature_unit(self):
+    def native_temperature_unit(self):
         """Return the unit of measurement."""
         return UnitOfTemperature.CELSIUS
 
